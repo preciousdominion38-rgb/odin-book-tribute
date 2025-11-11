@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Odin Book Tribute</title>
+  <link rel="stylesheet" href="/style.css"> <!-- 🔹 Leading slash is important -->
+</head>
+<body>
+
+<section class="appreciation-banner">
+  <h2>💛 Heartfelt gratitude to The Odin Project</h2>
+  <p>
+    Your lessons and guidance have built the foundation of my journey.
+    This tribute app is a symbol of that appreciation.
+  </p>
+</section>
+
+<div class="tribute-glow"></div>
+
+<section class="form-section">
+  <h3>Share your thoughts / lessons learned</h3>
+  <form action="/" method="POST" class="glow-form">
+    <textarea name="content" rows="3" placeholder="Your lesson..." required></textarea>
+    <button type="submit">Post</button>
+  </form>
+</section>
+
+<section class="posts-feed">
+  <% if (posts.length === 0) { %>
+    <p>No thoughts yet. Be the first to share!</p>
+  <% } else { %>
+    <% posts.forEach(post => { %>
+      <div class="post">
+        <strong><%= post.user.name %>:</strong> <%= post.content %>
+        <small>• <%= post.createdAt.toDateString() %></small>
+      </div>
+    <% }) %>
+  <% } %>
+</section>
+
+</body>
+</html>

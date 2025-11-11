@@ -1,0 +1,143 @@
+/* ===============================
+   GLOBAL STYLES
+=============================== */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: #fff;
+}
+
+h2, h3 {
+  text-align: center;
+  color: #fffa;
+  text-shadow: 0 0 10px #fff, 0 0 20px #ff0;
+}
+
+/* ===============================
+   FORM SECTIONS
+=============================== */
+.form-section {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 25px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 15px;
+  box-shadow: 0 0 20px #fff3;
+}
+
+.glow-form input, 
+.glow-form textarea, 
+.glow-form button {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.glow-form input, .glow-form textarea {
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+}
+
+.glow-form textarea {
+  resize: none;
+}
+
+.glow-form button {
+  background: linear-gradient(45deg, #ff0, #f0f);
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.glow-form button:hover {
+  box-shadow: 0 0 20px #ff0, 0 0 30px #f0f;
+  transform: scale(1.05);
+}
+
+/* ===============================
+   POSTS FEED
+=============================== */
+.posts-feed {
+  max-width: 600px;
+  margin: 40px auto;
+}
+
+.post {
+  background: rgba(255,255,255,0.05);
+  padding: 15px;
+  margin: 12px 0;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #fff3;
+  transition: all 0.3s ease;
+}
+
+.post:hover {
+  box-shadow: 0 0 25px #ff0, 0 0 30px #f0f;
+  transform: translateY(-3px);
+}
+
+/* ===============================
+   APPRECIATION BANNER
+=============================== */
+.appreciation-banner {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+  background: rgba(255,255,255,0.05);
+  border-radius: 20px;
+  box-shadow: 0 0 30px #fffa;
+  animation: glowBanner 2s infinite alternate;
+}
+
+@keyframes glowBanner {
+  0% { box-shadow: 0 0 10px #fffa; }
+  100% { box-shadow: 0 0 30px #fff, 0 0 50px #ff0; }
+}
+
+/* ===============================
+   TRIBUTE GLOW EFFECT
+=============================== */
+.tribute-glow {
+  width: 80px;
+  height: 80px;
+  margin: 30px auto;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #ff0, #f0f);
+  box-shadow: 0 0 20px #ff0, 0 0 40px #f0f;
+  animation: spinGlow 4s linear infinite;
+}
+
+@keyframes spinGlow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ===============================
+   LINKS
+=============================== */
+a {
+  color: #ff0;
+  text-decoration: none;
+}
+
+a:hover {
+  text-shadow: 0 0 10px #ff0;
+}
+
+/* ===============================
+   RESPONSIVE
+=============================== */
+@media screen and (max-width: 480px) {
+  .form-section, .posts-feed, .appreciation-banner {
+    width: 90%;
+    margin: 20px auto;
+  }
+}
